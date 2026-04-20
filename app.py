@@ -2,8 +2,6 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Atualização automática
-st.experimental_rerun
 
 sheet_id = "1MCFkO3jnVwjDKHauyq3iXjTfIAdWYe34jDkXN5CoGMw"
 url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv"
