@@ -35,7 +35,7 @@ with col1:
     st.markdown(
     f"""
     <div style='text-align: center'>
-        <h4>Total de Respostas</h4>
+        <h2>Total de Respostas</h2>
         <h1 style='font-size:70px; color:#4dabf7'>{len(scores)}</h1>
     </div>
     """,
