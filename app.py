@@ -8,7 +8,7 @@ url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv"
 
 st.set_page_config(page_title="Dashboard de Gestão", layout="wide")
 
-st.title("📊 Perfil de Gestão da Equipe (Ao Vivo)")
+st.title("📊 Perfil de Gestão da Equipe")
 
 # Ler dados
 df = pd.read_csv(url)
@@ -32,7 +32,15 @@ for s in scores:
 col1, col2 = st.columns(2)
 
 with col1:
-    st.metric("Total de Respondentes", len(scores))
+    st.markdown(
+    f"""
+    <div style='text-align: center'>
+        <h4>Total de Respostas</h4>
+        <h1 style='font-size:70px; color:#4dabf7'>{len(scores)}</h1>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 with col2:
     fig, ax = plt.subplots()
